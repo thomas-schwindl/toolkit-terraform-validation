@@ -29,3 +29,8 @@ jobs:
       - name: Initializing directory
         working-directory: ./tf/modules/
         run: terraform init
+      
+      # creating the execution plan
+      - name: Creating the execution plan
+        working-directory: ./tf/modules/
+        run: terraform plan
