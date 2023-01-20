@@ -1,0 +1,22 @@
+# This workflow is used, to validate terraform scripts. 
+# This is __not__ used to deploy any script to a specifc provider.
+
+name: terraform-validation
+
+# Any push to the branch "validation" will issue this action.
+on: 
+  push:
+    branches: [ "validation" ]
+
+# Allow manual dispatch of the workflow via github gui.
+  workflow_dispatch:
+
+
+jobs: 
+  terraform-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      # checking out the repo so that the action can access it.
+      - name: Checking out the repo
+        uses: actions/checkout@3
