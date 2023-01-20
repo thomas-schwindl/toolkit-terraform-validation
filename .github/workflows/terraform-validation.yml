@@ -20,3 +20,7 @@ jobs:
       # checking out the repo so that the action can access it.
       - name: Checking out the repo
         uses: actions/checkout@v3
+
+      # Setting up the terraform environment
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v2
