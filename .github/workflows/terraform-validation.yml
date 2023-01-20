@@ -24,3 +24,8 @@ jobs:
       # Setting up the terraform environment
       - name: Setup terraform
         uses: hashicorp/setup-terraform@v2
+
+      # initializing the working directory which contains the terraform scripts
+      - name: Initializing directory
+        working-directory: ./tf/modules/
+        run: terraform init
